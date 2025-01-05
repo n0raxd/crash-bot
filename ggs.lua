@@ -67,7 +67,7 @@ end
 for _, keypad in ipairs(foundKeypads) do
     currentKeypad = keypad -- Set the current keypad
     fireclickdetector(keypad:FindFirstChild("Clear"):FindFirstChild("RangeC"))
-    typegear(_G.MyGlobalVar) -- Example input sequence, replace with your own
+    typegear(_G.gearid) -- Example input sequence, replace with your own
 end
 local RunService = game:GetService("RunService")
 
